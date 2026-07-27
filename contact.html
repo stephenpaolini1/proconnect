@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProConnect | Contact</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>ProConnect</h1>
+        <p class="tagline">Real coaching from real players &mdash; by Stephen Paolini</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="howitworks.html">How It Works</a></li>
+            <li><a href="players.html">For Players</a></li>
+            <li><a href="facilities.html">For Facilities</a></li>
+            <li><a href="camps.html">Find a Camp</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <p>Have a question about running a camp, listing a facility, or
+                registering your athlete? Send us a message and we'll get back
+                to you. Fields marked with an asterisk (*) are required.</p>
+
+            <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                <fieldset>
+                    <legend>Your Information</legend>
+
+                    <label for="name">Name: *</label>
+                    <input type="text" name="name" id="name" required placeholder="Your first and last name">
+
+                    <label for="email">Email: *</label>
+                    <input type="email" name="email" id="email" required placeholder="you@example.com">
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555">
+
+                    <label for="role">I am a: *</label>
+                    <select name="role" id="role" required>
+                        <option value="">Choose one...</option>
+                        <option value="player">Player</option>
+                        <option value="facility">Facility</option>
+                        <option value="family">Youth or Family</option>
+                    </select>
+
+                    <label for="message">Message: *</label>
+                    <textarea name="message" id="message" rows="5" cols="40" required
+                        placeholder="How can we help?"></textarea>
+
+                    <input type="submit" value="Send Message">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 ProConnect. All rights reserved.</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="howitworks.html">How It Works</a> |
+            <a href="players.html">For Players</a> |
+            <a href="facilities.html">For Facilities</a> |
+            <a href="camps.html">Find a Camp</a> |
+            <a href="support.html">Support</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p>info@proconnect.com | Boston, MA</p>
+    </footer>
+</body>
+
+</html>

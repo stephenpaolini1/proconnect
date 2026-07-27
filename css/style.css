@@ -21,6 +21,12 @@ h3 {
     font-family: Georgia, "Times New Roman", serif;
 }
 
+/* responsive images - flexible so photos never break the layout */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* header banner - tint so the title reads */
 header {
     background-color: #1a1a1a;
@@ -201,10 +207,16 @@ main {
     color: #666666;
 }
 
-.pricing table {
-    width: 100%;
+/* scroll container - keeps a wide table from dragging the whole page */
+.table-wrapper {
     max-width: 800px;
     margin: 25px auto 0 auto;
+    overflow: auto;
+}
+
+.pricing table {
+    width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
     font-size: 0.9em;
 }
@@ -258,10 +270,174 @@ main {
     margin-bottom: 12px;
 }
 
+/* support services - ordered categories with nested hours */
+.support {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.support>p {
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.support ol {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 170%;
+}
+
+.support ol>li {
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+/* nested hours - home plate markers, normal weight */
+.support ul {
+    list-style-image: url(../images/bullet-homeplate.png);
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.support ul li {
+    margin-bottom: 4px;
+}
+
+/* about page */
+.about {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about p {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.about figure {
+    margin: 30px auto;
+    max-width: 400px;
+}
+
+.about figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666666;
+}
+
+/* contact form */
+.contact {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact>p {
+    text-align: left;
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.contact fieldset {
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+}
+
+.contact legend {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85em;
+    color: #666666;
+    padding: 0 10px;
+}
+
+.contact label {
+    display: block;
+    margin: 18px 0 6px 0;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+.contact input[type="submit"] {
+    width: auto;
+    margin-top: 22px;
+    padding: 14px 34px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* find a camp - listing cards */
+.camps {
+    text-align: center;
+}
+
+.camps>p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #666666;
+}
+
+.camp {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.camp figure {
+    margin: 0;
+}
+
+.camp h3 {
+    margin: 18px 20px 8px 20px;
+    font-size: 1.2em;
+}
+
+.camp p {
+    margin: 0 20px 10px 20px;
+    color: #1a1a1a;
+}
+
+.camp .camp-meta {
+    color: #666666;
+    font-size: 0.9em;
+    margin-bottom: 4px;
+}
+
+.camp .btn {
+    margin: 12px 20px 0 20px;
+}
+
 /* wider screens (tablet/desktop) */
 @media (min-width: 768px) {
     nav ul {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -295,5 +471,15 @@ main {
     .pricing tbody th,
     .pricing tbody td {
         padding: 16px 20px;
+    }
+
+    .camp-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .camp {
+        width: 31%;
     }
 }
