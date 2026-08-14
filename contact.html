@@ -34,21 +34,30 @@
                 registering your athlete? Send us a message and we'll get back
                 to you. Fields marked with an asterisk (*) are required.</p>
 
-            <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+            <form method="post" action="https://webdevbasics.net/scripts/demo.php" onsubmit="return validateForm();">
                 <fieldset>
                     <legend>Your Information</legend>
 
-                    <label for="name">Name: *</label>
-                    <input type="text" name="name" id="name" required placeholder="Your first and last name">
+                    <label for="firstname">First Name: *</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First name">
+
+                    <label for="lastname">Last Name: *</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last name">
 
                     <label for="email">Email: *</label>
-                    <input type="email" name="email" id="email" required placeholder="you@example.com">
+                    <input type="text" name="email" id="email" placeholder="you@example.com">
 
                     <label for="phone">Phone:</label>
                     <input type="tel" name="phone" id="phone" placeholder="(555) 555-5555">
 
+                    <label for="city">City: *</label>
+                    <input type="text" name="city" id="city" placeholder="City">
+
+                    <label for="zip">ZIP Code: *</label>
+                    <input type="text" name="zip" id="zip" placeholder="5-digit ZIP">
+
                     <label for="role">I am a: *</label>
-                    <select name="role" id="role" required>
+                    <select name="role" id="role">
                         <option value="">Choose one...</option>
                         <option value="player">Player</option>
                         <option value="facility">Facility</option>
@@ -56,8 +65,7 @@
                     </select>
 
                     <label for="message">Message: *</label>
-                    <textarea name="message" id="message" rows="5" cols="40" required
-                        placeholder="How can we help?"></textarea>
+                    <textarea name="message" id="message" rows="5" cols="40" placeholder="How can we help?"></textarea>
 
                     <input type="submit" value="Send Message">
                 </fieldset>
@@ -79,6 +87,7 @@
         </p>
         <p>info@proconnect.com | Boston, MA</p>
     </footer>
+    <script src="js/validate.js"></script>
 </body>
 
 </html>
