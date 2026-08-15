@@ -207,8 +207,9 @@ main {
     color: #666666;
 }
 
-/* scroll container - keeps a wide table from dragging the whole page */
+/* table hidden on mobile (cards show instead), returns at 768 */
 .table-wrapper {
+    display: none;
     max-width: 800px;
     margin: 25px auto 0 auto;
     overflow: auto;
@@ -251,6 +252,56 @@ main {
 
 .pricing tbody tr:nth-of-type(even) {
     background-color: #f4f4f4;
+}
+
+/* pricing plan cards - shown on mobile in place of the table */
+.plan-cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.plan {
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.plan h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.plan-price {
+    margin: 6px 0 18px 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.plan ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.plan li span:first-child {
+    font-weight: bold;
+}
+
+.plan li span:last-child {
+    color: #666666;
+    text-align: right;
+    padding-left: 15px;
 }
 
 /* steps (for facilities) */
@@ -471,6 +522,14 @@ main {
     .pricing tbody th,
     .pricing tbody td {
         padding: 16px 20px;
+    }
+
+    .table-wrapper {
+        display: block;
+    }
+
+    .plan-cards {
+        display: none;
     }
 
     .camp-list {
